@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" style="background: transparent !important;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prediction Exchange</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body hidden style="background: transparent !important;">
+  <main id="exchange" hidden>
+    <header>
+      <div><p id="brand"></p><h1>Prediction Exchange</h1><p id="bank" class="meta"></p></div>
+      <div class="tools"><div class="wallet"><span id="character">—</span><small>Cash</small><strong id="cash">—</strong></div>
+        <button data-tab="stats" type="button">Stats</button><button id="exit" type="button" aria-label="Close exchange">✕</button></div>
+    </header>
+    <nav aria-label="Exchange views">
+      <button data-tab="open">Open markets</button><button data-tab="history">Results & claims</button>
+      <button data-tab="admin" hidden>Manage markets</button>
+    </nav>
+    <div id="notice" role="status" aria-live="polite" hidden></div>
+    <section id="content"></section>
+  </main>
+  <aside id="trade-result" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <span id="result-announcement" class="sr-only"></span>
+    <div aria-hidden="true">
+      <p id="result-label"></p>
+      <strong id="result-amount"></strong>
+      <p id="result-market"></p>
+    </div>
+  </aside>
+  <script src="trading.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
